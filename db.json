@@ -25,7 +25,7 @@
     { "id": 4, "name": "Sarah Lindert", "keynote": "Enter the new game", "eventId": 2 },
     { "id": 5, "name": "Paul Pilow", "keynote": "Just reload it", "eventId": 2 }
   ],
-  "subscription": [
+  "subscriptions": [
     { "id": 1, "name": "Evelyn Node", "status": "pending", "eventId": 1},
     { "id": 2, "name": "Kayron Dart", "status": "approved", "eventId": 1 },
     { "id": 3, "name": "Harry Go", "status": "pending", "eventId": 2 }
