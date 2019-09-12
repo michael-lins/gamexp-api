@@ -5,18 +5,18 @@
     { "id": 3, "title": "Event 3" }
   ],
   "schedules": [
-    { "id": 1, "10 am": "Grand Openning", "eventId": 1 },
-    { "id": 2, "11 am": "First Speaker", "eventId": 1 },
-    { "id": 3, "12 pm": "Lunch Break", "eventId": 1 },
-    { "id": 4, "1:30 pm": "Second Speaker", "eventId": 1 },
-    { "id": 5, "2:30 pm": "Coffe Break", "eventId": 1 },
-    { "id": 6, "3 pm": "Third Speaker", "eventId": 1 },
-    { "id": 7, "4 pm": "Grand Finale", "eventId": 1 },
-    { "id": 8, "9 am": "Welcome Party", "eventId": 2 },
-    { "id": 9, "10 am": "First Speaker", "eventId": 2 },
-    { "id": 10, "12 pm": "Lunch Break", "eventId": 2 },
-    { "id": 11, "1 pm": "Second Speaker", "eventId": 2 },
-    { "id": 12, "2 pm": "Goodbye Party", "eventId": 2 }
+    { "id": 1, "startTime": "10 am", "duration": 60, "name": "Grand Openning", "eventId": 1 },
+    { "id": 2, "startTime": "11 am", "duration": 60, "name": "First Speaker", "eventId": 1 },
+    { "id": 3, "startTime": "12 pm", "duration": 90, "name": "Lunch Break", "eventId": 1 },
+    { "id": 4, "startTime": "1:30 pm", "duration": 60, "name": "Second Speaker", "eventId": 1 },
+    { "id": 5, "startTime": "2:30 pm", "duration": 30, "name": "Coffe Break", "eventId": 1 },
+    { "id": 6, "startTime": "3 pm", "duration": 60, "name": "Third Speaker", "eventId": 1 },
+    { "id": 7, "startTime": "4 pm", "duration": 30, "name": "Grand Finale", "eventId": 1 },
+    { "id": 8, "startTime": "9 am", "duration": 60, "name": "Welcome Party", "eventId": 2 },
+    { "id": 9, "startTime": "10 am", "duration": 120, "name": "First Speaker", "eventId": 2 },
+    { "id": 10, "startTime": "12 pm", "duration": 60, "name": "Lunch Break", "eventId": 2 },
+    { "id": 11, "startTime": "1 pm", "duration": 60, "name": "Second Speaker", "eventId": 2 },
+    { "id": 12, "startTime": "2 pm", "duration": 60, "name": "Goodbye Party", "eventId": 2 }
   ],
   "speakers": [
     { "id": 1, "Mike Leen": "You may leave it now", "eventId": 1 },
@@ -26,8 +26,8 @@
     { "id": 5, "Paul Pilow": "Just reload it", "eventId": 2 }
   ],
   "subscription": {
-    { "id": 1, "name": "Evelyn Node", "status": "pending" },
-    { "id": 2, "name": "Kayron Dart", "status": "approved" },
-    { "id": 3, "name": "Harry Go", "status": "pending" }
+    { "id": 1, "name": "Evelyn Node", "status": "pending", "eventId": 1},
+    { "id": 2, "name": "Kayron Dart", "status": "approved", "eventId": 1 },
+    { "id": 3, "name": "Harry Go", "status": "pending", "eventId": 2 }
   }
 }
