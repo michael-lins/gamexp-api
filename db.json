@@ -1,0 +1,33 @@
+{
+  "events": [
+    { "id": 1, "title": "Event 1", "location": "Address of Event 1" },
+    { "id": 2, "title": "Event 2" },
+    { "id": 3, "title": "Event 3" }
+  ],
+  "schedules": [
+    { "id": 1, "10 am": "Grand Openning", "eventId": 1 },
+    { "id": 2, "11 am": "First Speaker", "eventId": 1 },
+    { "id": 3, "12 pm": "Lunch Break", "eventId": 1 },
+    { "id": 4, "1:30 pm": "Second Speaker", "eventId": 1 },
+    { "id": 5, "2:30 pm": "Coffe Break", "eventId": 1 },
+    { "id": 6, "3 pm": "Third Speaker", "eventId": 1 },
+    { "id": 7, "4 pm": "Grand Finale", "eventId": 1 },
+    { "id": 8, "9 am": "Welcome Party", "eventId": 2 },
+    { "id": 9, "10 am": "First Speaker", "eventId": 2 },
+    { "id": 10, "12 pm": "Lunch Break", "eventId": 2 },
+    { "id": 11, "1 pm": "Second Speaker", "eventId": 2 },
+    { "id": 12, "2 pm": "Goodbye Party", "eventId": 2 }
+  ],
+  "speakers": [
+    { "id": 1, "Mike Leen": "You may leave it now", "eventId": 1 },
+    { "id": 2, "Sean Norton": "Just take the next train", "eventId": 1 },
+    { "id": 3, "John Doe": "You must learn this word: no", "eventId": 1 },
+    { "id": 4, "Sarah Lindert": "Enter the new game", "eventId": 2 },
+    { "id": 5, "Paul Pilow": "Just reload it", "eventId": 2 }
+  ],
+  "subscription": {
+    { "id": 1, "name": "Evelyn Node", "status": "pending" },
+    { "id": 2, "name": "Kayron Dart", "status": "approved" },
+    { "id": 3, "name": "Harry Go", "status": "pending" }
+  }
+}
