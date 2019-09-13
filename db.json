@@ -1,33 +1,92 @@
 {
-  "events": [
-    { "id": 1, "title": "Event 1", "location": "Address of Event 1" },
-    { "id": 2, "title": "Event 2", "location": "Address of Event 2" },
-    { "id": 3, "title": "Event 3", "location": "Address of Event 3" }
+  "data": [
+    {
+      "type": "articles",
+      "id": "1",
+      "attributes": {
+        "title": "JSON API paints my bikeshed!"
+      },
+      "links": {
+        "self": "http://example.com/articles/1"
+      },
+      "relationships": {
+        "author": {
+          "links": {
+            "self": "http://example.com/articles/1/relationships/author",
+            "related": "http://example.com/articles/1/author"
+          },
+          "data": {
+            "type": "people",
+            "id": "9"
+          }
+        },
+        "comments": {
+          "links": {
+            "self": "http://example.com/articles/1/relationships/comments",
+            "related": "http://example.com/articles/1/comments"
+          },
+          "data": [
+            {
+              "type": "comments",
+              "id": "5"
+            },
+            {
+              "type": "comments",
+              "id": "12"
+            }
+          ]
+        }
+      }
+    }
   ],
-  "schedules": [
-    { "id": 1, "startTime": "10 am", "duration": 60, "name": "Grand Openning", "eventId": 1 },
-    { "id": 2, "startTime": "11 am", "duration": 60, "name": "First Speaker", "eventId": 1 },
-    { "id": 3, "startTime": "12 pm", "duration": 90, "name": "Lunch Break", "eventId": 1 },
-    { "id": 4, "startTime": "1:30 pm", "duration": 60, "name": "Second Speaker", "eventId": 1 },
-    { "id": 5, "startTime": "2:30 pm", "duration": 30, "name": "Coffe Break", "eventId": 1 },
-    { "id": 6, "startTime": "3 pm", "duration": 60, "name": "Third Speaker", "eventId": 1 },
-    { "id": 7, "startTime": "4 pm", "duration": 30, "name": "Grand Finale", "eventId": 1 },
-    { "id": 8, "startTime": "9 am", "duration": 60, "name": "Welcome Party", "eventId": 2 },
-    { "id": 9, "startTime": "10 am", "duration": 120, "name": "First Speaker", "eventId": 2 },
-    { "id": 10, "startTime": "12 pm", "duration": 60, "name": "Lunch Break", "eventId": 2 },
-    { "id": 11, "startTime": "1 pm", "duration": 60, "name": "Second Speaker", "eventId": 2 },
-    { "id": 12, "startTime": "2 pm", "duration": 60, "name": "Goodbye Party", "eventId": 2 }
-  ],
-  "speakers": [
-    { "id": 1, "name": "Mike Leen", "keynote": "You may leave it now", "eventId": 1 },
-    { "id": 2, "name": "Sean Norton", "keynote": "Just take the next train", "eventId": 1 },
-    { "id": 3, "name": "John Doe", "keynote": "You must learn this word: no", "eventId": 1 },
-    { "id": 4, "name": "Sarah Lindert", "keynote": "Enter the new game", "eventId": 2 },
-    { "id": 5, "name": "Paul Pilow", "keynote": "Just reload it", "eventId": 2 }
-  ],
-  "subscriptions": [
-    { "id": 1, "name": "Evelyn Node", "status": "pending", "eventId": 1},
-    { "id": 2, "name": "Kayron Dart", "status": "approved", "eventId": 1 },
-    { "id": 3, "name": "Harry Go", "status": "pending", "eventId": 2 }
+  "included": [
+    {
+      "type": "people",
+      "id": "9",
+      "attributes": {
+        "firstname": "Dan",
+        "lastname": "Gebhardt",
+        "twitter": "dgeb"
+      },
+      "links": {
+        "self": "http://example.com/people/9"
+      }
+    },
+    {
+      "type": "comments",
+      "id": "5",
+      "attributes": {
+        "body": "First!"
+      },
+      "relationships": {
+        "author": {
+          "data": {
+            "type": "people",
+            "id": "2"
+          }
+        }
+      },
+      "links": {
+        "self": "http://example.com/comments/5"
+      }
+    },
+    {
+      "type": "comments",
+      "id": "12",
+      "attributes": {
+        "body": "I like XML better"
+      },
+      "relationships": {
+        "author": {
+          "data": {
+            "type": "people",
+            "id": "9"
+          }
+        }
+      },
+      "links": {
+        "self": "http://example.com/comments/12"
+      }
+    }
   ]
 }
